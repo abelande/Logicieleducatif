@@ -65,19 +65,23 @@
 
   <script>
     function myFunction() {
+      //This changes the cursor to the image of a shovel - it works
       //alert("working");
       document.body.style.cursor = "url(img/pelle.png), pointer";
       //console.log(style.cursor);
     }
 
     function changepage() {
+      //I want to add an event listener to the image
       document.getElementById("pelle").addEventListener("click", function() {
         current = 'pelle'
       });
       document.getElementsByClassName("background").addEventListener("click", function() {
+        //If the cursor is a shovel, than the page should change
         if (current === 'pelle') {
           window.location.href = "potato1.html";
         } else {
+          //If the cursor is not a shovel the page should stay as it is
           window.location.href = "potato0.html";
         }
       });
