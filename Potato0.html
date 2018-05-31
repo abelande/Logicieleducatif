@@ -65,30 +65,53 @@
 
   <script>
     function myFunction() {
-      //This changes the cursor to the image of a shovel - it works
+      //This changes the cursor to an image
       //alert("working");
       document.body.style.cursor = "url(img/pelle.png), pointer";
       //console.log(style.cursor);
+
     }
 
-    function changepage() {
-      //I want to add an event listener to the image
-      document.getElementById("pelle").addEventListener("click", function() {
-        current = 'pelle'
-      });
-      document.getElementsByClassName("background").addEventListener("click", function() {
-        //If the cursor is a shovel, than the page should change
-        if (current === 'pelle') {
-          window.location.href = "potato1.html";
-        } else {
-          //If the cursor is not a shovel the page should stay as it is
-          window.location.href = "potato0.html";
-        }
-      });
-    }
+    var outil = this;
+    var idoutil = this.id;
+
+    //get id of tool
+    document.getElementById('pelle2').onclick = function() {
+      var idoutil = this.getAttribute('id');
+      console.log(this.id);
+
+    };
+
+    /*  document.getElementById('soil').onclick = function() {
+      var page = this;
+      var idpage = this.getAttribute('id');
+      //    console.log(idpage); - ok
+    };
+*/
+    document.getElementById('soil').onclick = function() {
+      if ('idoutil' === 'pelle2') {
+        document.location = "potato1.html";
+      } else {
+        document.location = "potato0.html";
+      }
+    };
+
+
+    /*    function changepage() {
+
+          //Get div of background image, add event listener onclick
+          document.getElementsByClassName('background').addEventListener("click", function() {
+            //This checks the variable
+            //If it is the shovel, then page changes
+            if (current == 'pelle') {
+              document.location = "potato1.html";
+              //If it is not the shovel, then page stays the same
+            } else {
+              document.location = "potato0.html";
+            }
+          });
+        }*/
   </script>
-
-
 </body>
 
 </html>
