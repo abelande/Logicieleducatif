@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Mon potager</title>
+  <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+
+  <style>
+    .background {
+      background-image: url("img/troudanslesol.png");
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="background" onclick="location.href='potato2.html';">
+
+    <div class="instructions"><b>Étape 2 : Planter la pomme de terre</b></br>Tu prends la pomme de terre et tu la plantes directement dans </br>le trou.</div>
+
+  </div>
+
+
+
+  <div class="sidenav">
+    <p><a href="Accueil.html">Accueil</a></p>
+    <p>Tes outils</p>
+    <table>
+      <tr>
+        <td onclick="alert('Tu as déjà creusé un trou.');"><img id=source1 src="img/pelle.png" alt="pelle"></td>
+        <td onclick="alert('On ne met pas de l\'eau tout de suite. Essaie encore.');"><img id="source2" src="img/arrosoir.png" alt="arrosoir"></td>
+      </tr>
+      <tr>
+        <td>Pelle</td>
+        <td>Arrosoir</td>
+      </tr>
+    </table>
+    <p>Tes semences</p>
+    <table>
+      <tr>
+        <td <div id=patates onclick="myFunction()"><img id="source0" src="img/patate0.png" alt="pomme de terre" </div></td>
+      </tr>
+      <tr>
+        <td>Pommes de terre</td>
+      </tr>
+    </table>
+    <p>Pour entretenir ton potager</p>
+    <table>
+      <tr>
+        <td onclick="alert('Ce n\'est pas la prochaine étape. Essaie encore.');"><img id="source3" src="img/engrais.png" alt="engrais"></td>
+        <td onclick="alert('Il fait déjà soleil.');"><img id="source4" src="img/soleil.png" alt="soleil"></td>
+      </tr>
+      <tr>
+        <td>Engrais</td>
+        <td>Soleil</td>
+      </tr>
+    </table>
+  </div>
+
+  <script>
+    function myFunction() {
+      //alert("working");
+      document.body.style.cursor = "url(img/patate0.png), pointer";
+      //console.log(style.cursor);
+    }
+  </script>
+
+
+</body>
