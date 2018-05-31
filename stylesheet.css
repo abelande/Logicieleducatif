@@ -1,0 +1,45 @@
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.background {
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-attachment: fixed;
+  background-size: contain;
+  height: 100vh;
+  width: 100vw;
+}
+
+div.instructions {
+  text-align: center;
+  font: 20px arial;
+}
+
+.sidenav {
+  width: 350px;
+  position: fixed;
+  z-index: 1;
+  top: 20px;
+  left: 10px;
+  background: #eee;
+  overflow-x: hidden;
+  padding: 8px 0;
+  overflow-y: scroll;
+  top: 0;
+  bottom: 0;
+}
+
+.sidenav p {
+  /*  padding: 6px 8px 6px 16px; */
+  text-decoration: none;
+  font-size: 18px;
+  /*  color: #2196F3; */
+  display: block;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+}
