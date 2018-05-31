@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Mon potager</title>
+  <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+
+  <style>
+    .background {
+      background-image: url("img/terreseulement.png");
+    }
+  </style>
+
+
+</head>
+
+<body>
+
+  <div class="background" onclick="changepage()">
+
+    <div class="instructions">Dans cet exercice, tu vas apprendre à faire pousser des pommes de terre.</br>
+      </br><b>Étape 1 : Préparer le sol</b></br>Tu vas commencer par creuser un trou dans la terre avec la pelle.</br> Il doit être juste assez profond pour y mettre la pomme de terre.</div>
+
+  </div>
+
+
+
+  <div class="sidenav">
+    <p><a href="Accueil.html">Accueil</a></p>
+    <p>Tes outils</p>
+    <table>
+      <tr>
+        <td>
+          <div id=pelle onclick="myFunction()"><img id=pellei src="img/pelle.png" alt="pelle"></div>
+        </td>
+        <td onclick="alert('On ne met pas de l\'eau tout de suite. Essaie encore.');"><img src="img/arrosoir.png" alt="Arrosoir"></td>
+      </tr>
+      <tr>
+        <td>Pelle</td>
+        <td>Arrosoir</td>
+      </tr>
+    </table>
+    <p>Tes semences</p>
+    <table>
+      <tr>
+        <td onclick="alert('Avant de prendre les pommes de terre, il faut creuser un trou avant.');"><img src="img/patate0.png" alt="pomme de terre"></td>
+      </tr>
+      <tr>
+        <td>Pommes de terre</td>
+      </tr>
+    </table>
+    <p>Pour entretenir ton potager</p>
+    <table>
+      <tr>
+        <td onclick="alert('Ce n\'est pas la première étape. Essaie encore.');"><img src="img/engrais.png" alt="engrais"></td>
+        <td onclick="alert('Il fait déjà soleil.');"><img src="img/soleil.png" alt="soleil"></td>
+      </tr>
+      <tr>
+        <td>Engrais</td>
+        <td>Soleil</td>
+      </tr>
+    </table>
+  </div>
+
+  <script>
+    function myFunction() {
+      //alert("working");
+      document.body.style.cursor = "url(img/pelle.png), pointer";
+      //console.log(style.cursor);
+    }
+
+    function changepage() {
+      document.getElementById("pelle").addEventListener("click", function() {
+        current = 'pelle'
+      });
+      document.getElementsByClassName("background").addEventListener("click", function() {
+        if (current === 'pelle') {
+          window.location.href = "potato1.html";
+        } else {
+          window.location.href = "potato0.html";
+        }
+      });
+    }
+  </script>
+
+
+</body>
+
+</html>
